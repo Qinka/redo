@@ -1,6 +1,6 @@
 # REDO System Kernel
 
-A tool operating system kernel.
+A toy operating system kernel.
 
 (Using Raspberry Pi 2B as example)
 
