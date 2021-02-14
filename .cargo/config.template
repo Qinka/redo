@@ -1,0 +1,15 @@
+# Build target
+[build]
+target = "armv7a-none-eabi"
+
+# Target setting
+[target.armv7a-none-eabi]
+# flags
+rustflags = ['-Clink-arg=-Tredo-platform/src/_platform/rpi2/link.ld', '-Ctarget-cpu=cortex-a7', '--cfg', 'board="rpi2"']
+# runner = "qemu-system-arm -M raspi2 -serial file:output.txt -display none -d in_asm --kernel "
+runner = "qemu-system-arm -M raspi2 -serial stdio -display none --kernel "
+# runner = "qemu-system-arm -M raspi2 -serial stdio -display none -s -S --kernel "
+# runner = "qemu-system-arm -M raspi2 -smp 4 -global bcm2835-fb.pixo=0 -d in_asm -display none --kernel"
+# rust-objcopy --strip-all -O binary .\target\armv7a-none-eabi\debug\redo-kernel .\target\armv7a-none-eabi\debug\redo-kernel.bin
+# qemu-system-arm -M raspi2 -smp 4 -serial stdio -display none --kernel .\target\armv7a-none-eabi\debug\redo-kernel.bin
+# dumpobj from rust-objcopy --strip-all -O binary redo-kernel redo-kernel.bin

@@ -1,0 +1,17 @@
+[package]
+name = "redo-platform"
+version = "0.1.0"
+authors = ["Johann Lee <me@qinka.pro>"]
+edition = "2018"
+
+
+# The features section is used to select the target board.
+[features]
+default = []
+rpi2 = []
+
+
+[dependencies]
+redo-bare        = { path = "../redo-bare"        }
+redo-bare-derive = { path = "../redo-bare-derive" }
+redo-cpu         = { path = "../redo-cpu"         }

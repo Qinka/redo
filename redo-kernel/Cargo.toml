@@ -1,0 +1,14 @@
+[package]
+name = "redo-kernel"
+version = "0.1.0"
+authors = ["Johann Li <me@qinka.pro>"]
+edition = "2018"
+
+##--------------------------------------------------------------------------------------------------
+## Dependencies
+##--------------------------------------------------------------------------------------------------
+[dependencies]
+redo-bare        = { path = "../redo-bare"        }
+redo-bare-derive = { path = "../redo-bare-derive" }
+redo-platform    = { path = "../redo-platform"    }
+redo-cpu         = { path = "../redo-cpu"         }
